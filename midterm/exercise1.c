@@ -8,9 +8,14 @@ int main(){
     while((a[i]= getchar()) != '\n'){
         i++;
     }
-    for(k = 0;k<i;k++){
-        if(a[k]>='A'&&a[k]<='Z')
+    for(k = 0;k<i;){
+        if((a[k]>='A'&&a[k]<='Z')||(a[k]>='a'&&a[k]<='z')){
+            k++;
+        }else{
+            amount++;
+            k++;
+        }
     }
-    printf("the number of wordis: %d\n",amount);
+    printf("The number of wordis: %d\n",amount);
     return 0;
 }
